@@ -1,4 +1,4 @@
-# AirBnB Clone - RESTful API
+g# AirBnB Clone - RESTful API
 Team Project: AirBnB clone - RESTful project is a collaboration betweenUchenna Oko and Joy Chinwendu, students of Software Engineering of ALXSE program cohort 15. The console is the first segment of the AirBnB project that will collectively cover fundamental concepts of higher level programming track. We will implement some of the features at this time-RESTful API. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter iscreated in this segment to manage objects for the AirBnB(HBnB) website.
 
 #### Functionalities of this command interpreter:
@@ -155,7 +155,7 @@ No known bugs yet at this time.
 
 ## Authors
 Uchenna Oko - [Github](https://github.com/uchecom) / [Twitter](https://twitter.com/Uchenna_Com001)  
-Joy Chiwendu - [Github](https://github.com/Te125) / [Twitter](https://twitter.com/)
+Joy Chiwendu - [Github](https://github.com/Te125) / [Twitter](https://twitter.com/ibom_joy)
 
 ## License
 Public Domain. No copy write protection.
