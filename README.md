@@ -155,7 +155,7 @@ No known bugs yet at this time.
 
 ## Authors
 Uchenna Oko - [Github](https://github.com/uchecom) / [Twitter](https://twitter.com/Uchenna_Com001)  
-Joy Chiwendu - [Github](https://github.com/Te125) / [Twitter](https://twitter.com/ibom_joy)
+Joy Chinwendu - [Github](https://github.com/Te125) / [Twitter](https://twitter.com/ibom_joy)
 
 ## License
 Public Domain. No copy write protection.
