@@ -4,6 +4,7 @@ Contains the FileStorage class
 """
 
 import json
+from datetime import datetime
 from models.amenity import Amenity
 from models.base_model import BaseModel
 from models.city import City
@@ -55,7 +56,7 @@ class FileStorage:
                 jo = json.load(f)
             for key in jo:
                 self.__objects[key] = classes[jo[key]["__class__"]](**jo[key])
-        except:
+        except Exception:
             pass
 
     def delete(self, obj=None):
@@ -81,4 +82,4 @@ class FileStorage:
 
     def count(self, cls=None):
         """This counts the number of objects in storage"""
-        return len(self.all(cls)) 
+        return len(self.all(cls))
