@@ -79,15 +79,17 @@ class DBStorage:
         """This retrieves one object"""
 
     def get(self, cls, id):
-        """Retrieve one object"""
-        all_clas = self.all(cls)
-
-        for obj in all_clas.values():
-            if id == str(obj.id):
-                return obj
-
+        """Retrieve one object from storage by class and id"""
+        if cls in classes.values() and id and type(id) == str:
+            all_clas = self.all(cls)
+            for key, value in all_clas.items():
+                if key.split(".")[1] == id:
+                    return value
         return None
 
     def count(self, cls=None):
         """This counts the number of objects in storage"""
-        return len(self.all(cls))
+        num = self.all(cls)
+        if cls in classes.values():
+            num = self.all(cls)
+        return len(num)
