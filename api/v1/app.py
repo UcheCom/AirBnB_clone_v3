@@ -1,12 +1,17 @@
 #!/usr/bin/python3
 """ Module: app """
 
+from flask_cors import CORS
 from flask import Flask, jsonify
 from os import getenv
 from api.v1.views import app_views
 from models import storage
 
 app = Flask(__name__)
+
+# Task 12
+CORS(app, resources={r"/api/v1/*": {"origins": "0"}})
+
 app.register_blueprint(app_views)
 app.url_map.strict_slashes = False
 
