@@ -3,6 +3,7 @@
 Contains class BaseModel
 """
 
+import hashlib
 from datetime import datetime
 import models
 from os import getenv
