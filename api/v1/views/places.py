@@ -73,7 +73,7 @@ def place_post(city_id):
 @app_views.route('/places/<string:place_id>', methods=['PUT'],
                  strict_slashes=False)
 def place_update(place_id):
-    """update a place"""
+    """updates a place"""
     place = storage.get("Place", place_id)
     if not place:
         abort(404)
@@ -86,7 +86,7 @@ def place_update(place_id):
         if key not in ['id', 'user_id', 'city_id', 'created_at',
                        'updated_at']:
             setattr(place, key, value)
-    storage.save()
+    place.save()
     return make_response(jsonify(place.to_dict()), 200)
 
 
