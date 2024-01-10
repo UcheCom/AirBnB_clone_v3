@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Handles  API actions on Place objects"""
 
+from models.state import State
 from models.amenity import Amenity
 from api.v1.views import app_views
 from flask import jsonify, abort, make_response, request
@@ -113,7 +114,7 @@ def places_search():
         places = storage.all('Place').values()
         place_list = []
         for place in places:
-            list_places.append(place.to_dict())
+            places_list.append(place.to_dict())
         return jsonify(places_list)
 
     places_list = []
@@ -132,7 +133,7 @@ def places_search():
         for city in city_obj:
             if city:
                 for place in city.places:
-                    if place not in list_places:
+                    if place not in places_list:
                         places_list.append(place)
 
     if amenities:
