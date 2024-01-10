@@ -35,7 +35,7 @@ class User(BaseModel, Base):
 	This is the getter for password,
 	hashed password is returned
 	"""
-	return self.__dict__.get('password')
+        return self.__dict__.get("password")
 
     @password.setter
     def password(self, password):
@@ -43,4 +43,4 @@ class User(BaseModel, Base):
         This returns nothing, but sets password
         with md5 hashing.
 	"""
-        self.__dict__['password'] = md5(password.encode('utf-8')).hexdigest()
+        self.__dict__["password"] = md5(password.encode('utf-8')).hexdigest()
