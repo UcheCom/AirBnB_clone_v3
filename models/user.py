@@ -26,7 +26,10 @@ class User(BaseModel, Base):
         last_name = ""
 
     def __init__(self, *args, **kwargs):
-        """initializes user"""
+        """initializes user
+           Args:
+               kwargs: keyword arguments.
+        """
         if kwargs:
             passwd = kwargs.pop('password', None)
             if passwd:
