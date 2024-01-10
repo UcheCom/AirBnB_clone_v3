@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ holds class User"""
 import models
+from  hashlib import md5
 from models.base_model import BaseModel, Base
 from os import getenv
 import sqlalchemy
@@ -27,3 +28,19 @@ class User(BaseModel, Base):
     def __init__(self, *args, **kwargs):
         """initializes user"""
         super().__init__(*args, **kwargs)
+
+    @property
+    def password(self):
+        """
+	This is the getter for password,
+	hashed password is returned
+	"""
+	return self.__dict__.get('password')
+
+    @password.setter
+    def password(self, password):
+        """
+        This returns nothing, but sets password
+        with md5 hashing.
+	"""
+        self.__dict__['password'] = md5(password.encode('utf-8')).hexdigest()
